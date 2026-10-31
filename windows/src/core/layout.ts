@@ -25,7 +25,13 @@ export type IslandViewName =
   | "recap"
   | "wardrobe"
   | "update"
-  | "whatsNew";
+  | "whatsNew"
+  | "music"
+  | "lyrics"
+  | "pomodoro"
+  | "water"
+  | "shelf"
+  | "tasks";
 
 export type BotStateName =
   | "idle"
@@ -100,6 +106,12 @@ export const VIEW_LAYOUTS: Record<IslandViewName, ViewLayout> = {
   // After an update: what the new version brings, then "Your Coucou so far".
   // Taller than a card, for two rows of items with their line.
   whatsNew: { height: 222, botX: 62, botY: null, botDiameter: 58, agentMode: "none" },
+  music: { height: 140, botX: 50, botY: 50, botDiameter: 36, agentMode: "none" },
+  lyrics: { height: 140, botX: 50, botY: 50, botDiameter: 36, agentMode: "none" },
+  pomodoro: { height: 140, botX: 50, botY: 50, botDiameter: 36, agentMode: "none" },
+  water: { height: 140, botX: 50, botY: 50, botDiameter: 36, agentMode: "none" },
+  shelf: { height: 140, botX: 50, botY: 50, botDiameter: 36, agentMode: "none" },
+  tasks: { height: 140, botX: 50, botY: 50, botDiameter: 36, agentMode: "none" },
 };
 
 // The upload views above are only the fallback geometry. Once a file is actually
@@ -127,6 +139,10 @@ export function islandSize(
     case "compact":
       return { w: COMPACT_W, h: NOTCH_H };
     case "expanded": {
+      if (view === "lyrics") return { w: 520, h: 140 };
+      if (view === "music" || view === "pomodoro" || view === "water" || view === "shelf" || view === "tasks") {
+        return { w: 420, h: 140 };
+      }
       const h = view === "prompt" ? chatPromptHeight(chatCount) : VIEW_LAYOUTS[view].height;
       return { w: EXPANDED_W, h };
     }

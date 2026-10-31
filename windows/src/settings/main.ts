@@ -1,3 +1,4 @@
+import { renderNusaSettings } from "./nusa-settings";
 // The Coucou window (settings.html): Flow dictation, the Notetaker and, under
 // Notch, every setting of the island — the place where anything that writes to
 // disk is confirmed. The window's frame and the Flow pages live in ../hub; the
@@ -1500,6 +1501,11 @@ async function render() {
     integrations: () => [integrationsSection(present), ...whatsappSections()],
     phone: () => [phoneSection(settings.phoneLink ?? false, toggle, settings)],
     shortcuts: () => [shortcutsSection(shortcutReport)],
+    nusa: () => {
+      const el = h("div");
+      renderNusaSettings(el);
+      return [el];
+    },
   };
   root.append(...(sections[notchPage]?.() ?? []));
   if (notchPage === "general") {

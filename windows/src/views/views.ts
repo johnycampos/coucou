@@ -1,3 +1,9 @@
+import { buildMusicNusaCard } from "./music-nusa";
+import { buildLyricsNusaCard } from "./lyrics-nusa";
+import { buildPomodoroNusaCard } from "./pomodoro-nusa";
+import { buildWaterNusaCard } from "./water-nusa";
+import { buildShelfNusaCard } from "./shelf-nusa";
+import { buildTasksNusaCard } from "./tasks-nusa";
 // Island views — DOM ports of IslandViewContent.swift. Paddings, font sizes,
 // colours and wording are copied from the Swift views so both platforms read
 // identically.
@@ -858,6 +864,24 @@ export function buildViews(
   map.set("wardrobe", buildWardrobe(actions));
   map.set("update", buildUpdate());
   map.set("whatsNew", buildWhatsNew());
+
+  const musicCard = buildMusicNusaCard(actions);
+  map.set("music", { el: musicCard.element, sync: () => musicCard.update(), tick: () => { musicCard.update(); return true; } });
+
+  const lyricsCard = buildLyricsNusaCard(actions);
+  map.set("lyrics", { el: lyricsCard.element, sync: () => lyricsCard.update(), tick: () => { lyricsCard.update(); return true; } });
+
+  const pomoCard = buildPomodoroNusaCard(actions);
+  map.set("pomodoro", { el: pomoCard.element, sync: () => pomoCard.update() });
+
+  const waterCard = buildWaterNusaCard(actions);
+  map.set("water", { el: waterCard.element, sync: () => waterCard.update() });
+
+  const shelfCard = buildShelfNusaCard(actions);
+  map.set("shelf", { el: shelfCard.element, sync: () => shelfCard.update() });
+
+  const tasksCard = buildTasksNusaCard(actions);
+  map.set("tasks", { el: tasksCard.element, sync: () => tasksCard.update() });
   // Not in the Windows v1: sending a file by email, window attach + web result.
   map.set("mail", buildPlaceholder(tl("Sending by email isn't in this version."), ""));
   map.set("searching", buildPlaceholder(tl("Claude is searching…"), ""));

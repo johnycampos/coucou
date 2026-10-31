@@ -3527,3 +3527,654 @@ html[data-dir="rtl"] #views :is(.bubble, .reply .md-p, .reply .md-h, .reply .md-
   display: block;
   height: 100%;
 }
+
+
+/* ===== NUSA INTEGRATION DESIGN SYSTEM ===================================== */
+.nusa-card {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 14px 18px 8px;
+  background: rgba(10, 13, 24, 0.94);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(236, 239, 247, 0.12);
+  border-radius: 0 0 32px 32px;
+  color: #eceff7;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.nusa-card-body {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex: 1;
+}
+
+/* Dots navigation */
+.nusa-dots-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 7px;
+  height: 18px;
+  margin-top: 4px;
+}
+
+.nusa-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 3px;
+  background: rgba(255, 255, 255, 0.22);
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.nusa-dot:hover {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.nusa-dot.active {
+  width: 16px;
+  background: #ffffff;
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.4);
+}
+
+/* Shared Buttons */
+.nusa-pill-btn {
+  height: 28px;
+  padding: 0 12px;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #eceff7;
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.15s ease;
+}
+
+.nusa-pill-btn:hover {
+  background: rgba(255, 255, 255, 0.22);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.nusa-primary-btn {
+  background: linear-gradient(90deg, #19b8ff, #2d5bff);
+  border: none;
+  color: #fff;
+  font-weight: 600;
+}
+
+.nusa-primary-btn:hover {
+  background: linear-gradient(90deg, #38c3ff, #436dff);
+}
+
+.nusa-ctrl-btn {
+  width: 30px;
+  height: 30px;
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.08);
+  border: none;
+  color: #eceff7;
+  font-size: 13px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.15s ease;
+}
+
+.nusa-ctrl-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: scale(1.05);
+}
+
+/* Music Card */
+.nusa-art-holder {
+  width: 58px;
+  height: 58px;
+  border-radius: 12px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.06);
+  flex-shrink: 0;
+}
+
+.nusa-art-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.nusa-meta-col {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.nusa-track-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: #ffffff;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.nusa-track-artist {
+  font-size: 12px;
+  color: #8c94a8;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.nusa-progress-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.nusa-time {
+  font-size: 10px;
+  color: #8c94a8;
+  font-variant-numeric: tabular-nums;
+}
+
+.nusa-bar-track {
+  flex: 1;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.nusa-bar-fill {
+  height: 100%;
+  width: 0%;
+  background: #ffffff;
+  border-radius: 2px;
+  transition: width 0.2s linear;
+}
+
+.nusa-controls-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-shrink: 0;
+}
+
+/* Lyrics Card (520px x 140px) */
+.nusa-lyrics-dual-pane {
+  display: flex;
+  gap: 16px;
+  flex: 1;
+  min-height: 0;
+}
+
+.nusa-lyrics-left {
+  width: 170px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 6px;
+  border-right: 1px solid rgba(255, 255, 255, 0.08);
+  padding-right: 12px;
+  flex-shrink: 0;
+}
+
+.nusa-art-mini {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.nusa-lyrics-title {
+  font-size: 13px;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.nusa-lyrics-artist {
+  font-size: 11px;
+  color: #8c94a8;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.nusa-lyrics-ctrls {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 4px;
+}
+
+.nusa-lyrics-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
+  background: linear-gradient(180deg, transparent, rgba(44, 100, 184, 0.15) 50%, transparent);
+  border-radius: 12px;
+  padding: 4px;
+}
+
+.nusa-lyrics-scroll {
+  flex: 1;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 24px 8px;
+  scrollbar-width: none;
+}
+
+.nusa-lyrics-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.nusa-lyric-line {
+  font-size: 13px;
+  color: #8c94a8;
+  cursor: pointer;
+  padding: 2px 4px;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+  line-height: 1.4;
+}
+
+.nusa-lyric-line:hover {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.nusa-lyric-line.active {
+  font-size: 15px;
+  font-weight: 700;
+  color: #ffffff;
+  text-shadow: 0 0 12px rgba(255, 255, 255, 0.6);
+  transform: scale(1.02);
+}
+
+.nusa-lyrics-status {
+  font-size: 12px;
+  color: #8c94a8;
+  text-align: center;
+  margin: auto;
+}
+
+/* Pomodoro Card */
+.nusa-pomo-ring-holder {
+  position: relative;
+  width: 64px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.nusa-pomo-ring {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: conic-gradient(from 200deg, #ff5a6e, #ff3a3a, #ff6b5f, #ff5a6e);
+  -webkit-mask: radial-gradient(circle, transparent 25.4px, #000 25.8px);
+  mask: radial-gradient(circle, transparent 25.4px, #000 25.8px);
+  box-shadow: 0 0 18px rgba(255, 70, 70, 0.35);
+}
+
+.nusa-pomo-time {
+  font-size: 14px;
+  font-weight: 700;
+  color: #ffffff;
+  font-variant-numeric: tabular-nums;
+}
+
+.nusa-pomo-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.nusa-pomo-title {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.nusa-pomo-sub {
+  font-size: 11px;
+  color: #8c94a8;
+}
+
+.nusa-pomo-modes {
+  display: flex;
+  gap: 4px;
+  margin-top: 4px;
+}
+
+.nusa-mini-pill {
+  padding: 2px 8px;
+  font-size: 11px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.08);
+  border: none;
+  color: #8c94a8;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.nusa-mini-pill.active {
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  font-weight: 600;
+}
+
+.nusa-pomo-ctrls {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 6px;
+}
+
+/* Water Card */
+.nusa-water-bottle-holder {
+  width: 44px;
+  height: 64px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  flex-shrink: 0;
+}
+
+.nusa-water-bottle-outline {
+  width: 28px;
+  height: 48px;
+  border: 2px solid #2699ff;
+  border-radius: 6px 6px 10px 10px;
+  position: relative;
+  overflow: hidden;
+  background: rgba(38, 153, 255, 0.1);
+  box-shadow: 0 0 12px rgba(38, 153, 255, 0.25);
+}
+
+.nusa-water-bottle-fill {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #2699ff;
+  transition: height 0.3s ease;
+}
+
+.nusa-water-bottle-text {
+  font-size: 9px;
+  color: #8c94a8;
+}
+
+.nusa-water-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.nusa-water-title {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.nusa-water-stats {
+  font-size: 12px;
+  font-weight: 600;
+  color: #2699ff;
+}
+
+.nusa-water-note {
+  font-size: 11px;
+  color: #8c94a8;
+}
+
+.nusa-water-ctrls {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 4px;
+}
+
+/* Shelf Card */
+.nusa-shelf-dropzone {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  border: 1.4px dashed rgba(255, 255, 255, 0.25);
+  border-radius: 16px;
+  padding: 8px 12px;
+  background: rgba(255, 255, 255, 0.03);
+  transition: all 0.25s ease;
+  min-height: 0;
+}
+
+.nusa-shelf-dropzone.hover {
+  border-color: #19b8ff;
+  background: rgba(25, 184, 255, 0.08);
+  box-shadow: 0 0 16px rgba(25, 184, 255, 0.2);
+}
+
+.nusa-shelf-empty {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+}
+
+.nusa-shelf-icon {
+  font-size: 20px;
+}
+
+.nusa-shelf-prompt {
+  font-size: 13px;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.nusa-shelf-sub {
+  font-size: 11px;
+  color: #8c94a8;
+}
+
+.nusa-shelf-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+.nusa-shelf-count {
+  font-size: 11px;
+  color: #8c94a8;
+}
+
+.nusa-shelf-list {
+  flex: 1;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  scrollbar-width: none;
+}
+
+.nusa-shelf-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 8px;
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.nusa-shelf-item:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.nusa-shelf-item-icon {
+  font-size: 14px;
+}
+
+.nusa-shelf-item-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.nusa-shelf-item-name {
+  font-size: 12px;
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.nusa-shelf-item-size {
+  font-size: 10px;
+  color: #8c94a8;
+}
+
+.nusa-shelf-del-btn {
+  background: transparent;
+  border: none;
+  color: #8c94a8;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.nusa-shelf-del-btn:hover {
+  color: #ff5a6e;
+}
+
+/* Tasks Card */
+.nusa-tasks-card {
+  gap: 4px;
+}
+
+.nusa-tasks-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nusa-tasks-stats {
+  font-size: 11px;
+  font-weight: 600;
+  color: #19b8ff;
+}
+
+.nusa-tasks-input {
+  width: 100%;
+  height: 26px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 13px;
+  padding: 0 10px;
+  color: #ffffff;
+  font-size: 11px;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.nusa-tasks-input:focus {
+  border-color: #19b8ff;
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.nusa-tasks-list {
+  flex: 1;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  scrollbar-width: none;
+  min-height: 0;
+}
+
+.nusa-task-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 2px 4px;
+}
+
+.nusa-task-row.completed .nusa-task-title {
+  text-decoration: line-through;
+  color: #6b7079;
+}
+
+.nusa-task-check {
+  width: 16px;
+  height: 16px;
+  border-radius: 8px;
+  border: 1.5px solid rgba(255, 255, 255, 0.3);
+  background: transparent;
+  color: #10b981;
+  font-size: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 0;
+  flex-shrink: 0;
+}
+
+.nusa-task-check.checked {
+  border-color: #10b981;
+  background: rgba(16, 185, 129, 0.2);
+}
+
+.nusa-task-title {
+  font-size: 12px;
+  color: #eceff7;
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.nusa-task-del {
+  background: transparent;
+  border: none;
+  color: #6b7079;
+  cursor: pointer;
+  padding: 2px;
+}
+
+.nusa-task-del:hover {
+  color: #ff5a6e;
+}
+
+.nusa-tasks-empty {
+  font-size: 11px;
+  color: #6b7079;
+  text-align: center;
+  margin: auto;
+}
