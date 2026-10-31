@@ -1,7 +1,7 @@
 {
   "name": "coucou-windows",
   "private": true,
-  "version": "0.6.0",: integrate nusa dynamic island layout and features (lyrics, pomodoro, water, shelf, tasks))
+  "version": "0.6.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
